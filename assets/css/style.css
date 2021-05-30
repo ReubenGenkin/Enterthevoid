@@ -1,0 +1,114 @@
+* {
+    line-height: 1.5;
+    margin: 0;
+}
+
+:root {
+    --blue: #00d9ff;
+    --pink: #ff21d7;
+    --gradient: linear-gradient(142deg, rgba(255,33,215,1) 0%, rgb(0, 132, 255) 100%);
+  }
+
+body {
+    background-image: url("./../images/dateNightBackground.png");
+    /* background: rgb(255,33,215); */
+    /* background: linear-gradient(142deg, rgba(255,33,215,1) 0%, rgba(0,217,255,1) 100%); */
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    text-align: center;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero {
+    background-image: url("./../images/title-background.png");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: 60% 90%;
+}
+
+.hero-body {
+    padding: 2rem 1.5rem;
+}
+
+
+.app-name {
+    font-family: 'Londrina Solid', cursive;
+    margin-bottom: -5px;
+    color: black;
+    font-size: 4.5rem;
+}
+
+.subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    font-style: italic;
+    background-color: var(--pink);
+    background-image: var(--gradient);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
+.slogan-style {
+    background-image: url("./../images/blurb-background.png");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100px;
+}
+
+
+.slogan {
+    font-weight: 600;
+    width:55%;
+    color: black;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+#button-group {
+ margin: 10px 0 8px 0;
+}
+
+#button-group h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+#button-group p {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.btn {
+    display: flex;
+    width: 100%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    justify-content: center;
+    padding-top: calc(.5em - 1px);
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: calc(.5em - 1px);
+    border: none;
+}
+
+#btn-1 {
+    background-image: url("./../images/button-background-1.png");
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+#btn-2 {
+    background-image: url("./../images/button-background-2.png");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    display: inline-block;
+    border: none;
+}
+
