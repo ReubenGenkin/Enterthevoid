@@ -11,8 +11,6 @@
 
 body {
     background-image: url("./../images/dateNightBackground.png");
-    /* background: rgb(255,33,215); */
-    /* background: linear-gradient(142deg, rgba(255,33,215,1) 0%, rgba(0,217,255,1) 100%); */
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover; 
@@ -21,6 +19,17 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.gradient-text{
+    background-color: var(--pink);
+    background-image: var(--gradient);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
+/* header area */
 .hero {
     background-image: url("./../images/title-background.png");
     background-position: center; 
@@ -45,22 +54,16 @@ body {
     font-weight: 600;
     font-size: 2rem;
     font-style: italic;
-    background-color: var(--pink);
-    background-image: var(--gradient);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-text-fill-color: transparent;
+    line-height: 1.5rem;
 }
 
+/* app description area */
 .slogan-style {
     background-image: url("./../images/blurb-background.png");
     background-position: center; 
     background-repeat: no-repeat; 
     height: 100px;
 }
-
 
 .slogan {
     font-weight: 600;
@@ -70,6 +73,7 @@ body {
     padding-top: 30px;
 }
 
+/* buttons */
 #button-group {
  margin: 10px 0 8px 0;
 }
@@ -82,12 +86,13 @@ body {
 #button-group p {
     font-size: 2rem;
     font-weight: 700;
+    margin: -8px 0;
 }
 
 .btn {
     display: flex;
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 2rem;
     cursor: pointer;
     justify-content: center;
     padding-top: calc(.5em - 1px);
@@ -101,14 +106,28 @@ body {
     background-image: url("./../images/button-background-1.png");
     background-position: center; 
     background-repeat: no-repeat; 
+    background-color: transparent;
+    background-size: cover;
+    display: inline-block;
+    border: none;
+    font-family: 'Londrina Solid', cursive;
 }
 
 #btn-2 {
     background-image: url("./../images/button-background-2.png");
     background-position: center; 
     background-repeat: no-repeat; 
+    background-color: transparent;
     background-size: cover;
     display: inline-block;
     border: none;
+    font-family: 'Londrina Solid', cursive;
+}
+
+/* footer area */
+footer {
+    background-color: var(--pink);
+    color: white;
+    padding: 8px 0;
 }
 
