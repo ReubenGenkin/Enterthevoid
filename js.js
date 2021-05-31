@@ -108,8 +108,11 @@ $('.btn').click(function(){
    //creating the buttons
    for (i=0; i<3; i++) {
       
+      let buttonLink = $('<a>', {id: "link-"+ i, "class": "modal-0-1-2", "href": "#ex"+i, "rel": "modal:open"})
       let buttonChoices = $('<button>', {id: "button-"+ i, "class": "gradient-text button-0-1-2"})
-      $('#buttonDiv').append(buttonChoices)
+
+      $('#buttonDiv').append(buttonLink)
+      buttonLink.append(buttonChoices)
    }
    //setting content for the buttons
    $('.button-0-1-2').each(function (){
