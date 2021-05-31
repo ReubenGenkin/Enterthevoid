@@ -76,3 +76,33 @@ function getRecipe() {
 let a ="sdfsdfsdfsdfsdfsdfds"
 
 }
+
+
+//button functionality for first page (casual)(romantic)
+
+$('#btn-1').click(function(){
+
+   //removing page content
+   $('#slogan').remove()
+   $('#btn-1').remove()
+   $('#btn-2').remove()
+
+   //populating page with new content
+   $('#subheader').text('Casual')
+   $('#page-direction').text('Please click the following buttons for more information.')
+
+   for (i=0; i<3; i++) {
+      
+      let buttonChoices = $('<button>', {id: "button-"+ i, "class": "gradient-text button-0-1-2"})
+      $('#buttonDiv').append(buttonChoices)
+   }
+   
+   $('.button-0-1-2').each(function (){
+      let buttonTitle = ["Drink", "Recipe", "Restaurant"];
+      var textItem = $(this).attr("id").split("-")[1]
+
+      $(this).text(buttonTitle[textItem])
+
+
+   })
+})
