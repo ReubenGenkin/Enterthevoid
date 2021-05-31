@@ -1,0 +1,133 @@
+* {
+    line-height: 1.5;
+    margin: 0;
+}
+
+:root {
+    --blue: #00d9ff;
+    --pink: #ff21d7;
+    --gradient: linear-gradient(142deg, rgba(255,33,215,1) 0%, rgb(0, 132, 255) 100%);
+  }
+
+body {
+    background-image: url("./../images/dateNightBackground.png");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    text-align: center;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.gradient-text{
+    background-color: var(--pink);
+    background-image: var(--gradient);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
+/* header area */
+.hero {
+    background-image: url("./../images/title-background.png");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: 60% 90%;
+}
+
+.hero-body {
+    padding: 2rem 1.5rem;
+}
+
+
+.app-name {
+    font-family: 'Londrina Solid', cursive;
+    margin-bottom: -5px;
+    color: black;
+    font-size: 4.5rem;
+}
+
+.subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    font-style: italic;
+    line-height: 1.5rem;
+}
+
+/* app description area */
+.slogan-style {
+    background-image: url("./../images/blurb-background.png");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100px;
+}
+
+.slogan {
+    font-weight: 600;
+    width:55%;
+    color: black;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+/* buttons */
+#button-group {
+ margin: 10px 0 8px 0;
+}
+
+#button-group h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+#button-group p {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: -8px 0;
+}
+
+.btn {
+    display: flex;
+    width: 100%;
+    font-size: 2rem;
+    cursor: pointer;
+    justify-content: center;
+    padding-top: calc(.5em - 1px);
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: calc(.5em - 1px);
+    border: none;
+}
+
+#btn-1 {
+    background-image: url("./../images/button-background-1.png");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-color: transparent;
+    background-size: cover;
+    display: inline-block;
+    border: none;
+    font-family: 'Londrina Solid', cursive;
+}
+
+#btn-2 {
+    background-image: url("./../images/button-background-2.png");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-color: transparent;
+    background-size: cover;
+    display: inline-block;
+    border: none;
+    font-family: 'Londrina Solid', cursive;
+}
+
+/* footer area */
+footer {
+    background-color: var(--pink);
+    color: white;
+    padding: 8px 0;
+}
+
