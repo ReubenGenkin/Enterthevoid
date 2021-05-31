@@ -80,7 +80,7 @@ let a ="sdfsdfsdfsdfsdfsdfds"
 
 //button functionality for first page (casual)(romantic)
 
-$('.btn').click(function(){
+$('.btn').click(function generateDate(){
 
    Object.defineProperty(String.prototype, 'capitalize', {
       value: function () {
@@ -90,20 +90,44 @@ $('.btn').click(function(){
       configurable: true
   });
 
+  //testing for  if function is running or refresh or intiital
+
+  //for initial
+  if (localStorage.getItem("refreshed") !== "true") {
+   localStorage.removeItem("refreshed")
    //storing the id
    let buttonId = $(this).attr("id")
+
    console.log(buttonId)
 
    let buttonSplit = buttonId.split("-")[1]
+   localStorage.setItem("buttonClicked", buttonSplit.capitalize())
 
-   //removing page content
+   //removing page content on initial
    $('#slogan').remove()
    $('#btn-casual').remove()
    $('#btn-romantic').remove()
 
-   //populating page with new content
+   //populating page with new content on initial
    $('#subheader').text(buttonSplit.capitalize())
    $('#page-direction').text('Please click the following buttons for more information.')
+
+   //for refresh
+  } else {
+   localStorage.removeItem("refreshed")
+   $('#refresh').remove()
+   //populating page with new content on refresh
+   $('#subheader').text(localStorage.getItem("buttonClicked"))
+   $('#page-direction').text('Please click the following buttons for more information.')
+
+   //removing previously generated buttons for refresh
+   for (i=0; i<3; i++) {
+      
+      $("#link-"+ i).remove();
+      $("#button-"+ i).remove();
+   }
+  }
+
 
    //creating the buttons
    for (i=0; i<3; i++) {
@@ -120,5 +144,21 @@ $('.btn').click(function(){
       var textItem = $(this).attr("id").split("-")[1]
 
       $(this).text(buttonTitle[textItem])
+   })
+
+   let refreshDiv = $('<div>', {id: "refresh"})
+   let refreshTitle = $('<h3>', {id: "refresh-title"}).text("Refresh")
+   let refreshSpan = $('<span>', {id: "refresh-span"}).text("If you want new option, please click the refresh button")
+   let refreshBtn = $('<button>', {id: "refresh-btn", "class": "refresh-btn"}).text("Refresh")
+   $('body').append(refreshDiv)
+   refreshDiv.append(refreshTitle)
+   refreshDiv.append(refreshSpan)
+   refreshDiv.append(refreshBtn)
+
+   $('#refresh-btn').click(function() {
+      localStorage.setItem("refreshed", "true")
+      generateDate();
+
+
    })
 })
