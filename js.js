@@ -90,14 +90,14 @@ $('.btn').click(function generateDate(){
       configurable: true
   });
 
-  //testing for  if function is running or refresh or intiital
+  //start of testing for if function is running from refresh or intiital
 
   //for initial
   if (localStorage.getItem("refreshed") !== "true") {
    localStorage.removeItem("refreshed")
+
    //storing the id
    let buttonId = $(this).attr("id")
-
    console.log(buttonId)
 
    let buttonSplit = buttonId.split("-")[1]
@@ -116,17 +116,20 @@ $('.btn').click(function generateDate(){
   } else {
    localStorage.removeItem("refreshed")
    $('#refresh').remove()
+
    //populating page with new content on refresh
    $('#subheader').text(localStorage.getItem("buttonClicked"))
    $('#page-direction').text('Please click the following buttons for more information.')
 
-   //removing previously generated buttons for refresh
+   //removing previously generated buttons on refresh
    for (i=0; i<3; i++) {
       
       $("#link-"+ i).remove();
       $("#button-"+ i).remove();
    }
   }
+
+  //end of refresh testing
 
 
    //creating the buttons
@@ -146,6 +149,7 @@ $('.btn').click(function generateDate(){
       $(this).text(buttonTitle[textItem])
    })
 
+   //generating refresh content(button, title, and span)
    let refreshDiv = $('<div>', {id: "refresh"})
    let refreshTitle = $('<h3>', {id: "refresh-title"}).text("Refresh")
    let refreshSpan = $('<span>', {id: "refresh-span"}).text("If you want new option, please click the refresh button")
@@ -155,6 +159,7 @@ $('.btn').click(function generateDate(){
    refreshDiv.append(refreshSpan)
    refreshDiv.append(refreshBtn)
 
+   //refresh button on click function
    $('#refresh-btn').click(function() {
       localStorage.setItem("refreshed", "true")
       generateDate();

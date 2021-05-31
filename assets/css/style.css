@@ -134,3 +134,9 @@ footer {
     width: 100%;
 }
 
+/* modal styles */
+
+.modal {
+    width: 200px;
+    height: 500px;
+}
