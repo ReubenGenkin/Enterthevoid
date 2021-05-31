@@ -1,24 +1,24 @@
 
 //getting location using watch
 
-//scope cariables
+//global variables for location
 var showPosition = ""
 var watchID;
 var geoLoc;
 
 //location peramater
 function showLocation(position) {
-   var latitude = position.coords.latitude;
-   var longitude = position.coords.longitude;
-   console.log("Latitude : " + latitude + " Longitude: " + longitude);
+   var lat = position.coords.latitude;
+   var long = position.coords.longitude;
+   console.log(`Latitude: ${lat} Longitude: ${long}`);
 }
 
-// error handling
+// error handling for location
 function errorHandler(err) {
    if(err.code == 1) {
       alert("Error: Access is denied!");
    } else if( err.code == 2) {
-      alert("Error: Position is unavailable!");
+      alert("Error: Position is unavailable");
    }
 }
 
@@ -27,12 +27,12 @@ function getLocationUpdate(){
    
    if(navigator.geolocation){
       
-      // timeout at 60000 milliseconds (60 seconds)
+      // timeout at 60 seconds
       var options = {timeout:60000};
       geoLoc = navigator.geolocation;
       watchID = geoLoc.watchPosition(showLocation, errorHandler, options);
    } else {
-      alert("Sorry, browser does not support geolocation!");
+      alert("Error: Your current browser does not support geolocation");
    }
 }
 //setting basic buttons for testing
@@ -45,6 +45,7 @@ $('#main').append($('<button>',{id: "stop","class": 'stop'}));
 $('#start').click(function(){
     getLocationUpdate();
 })
+
 //ending the watch
 $('#start').click(function(){
     stopWatch();
@@ -63,7 +64,7 @@ const settings = {
 		"x-rapidapi-host": "the-cocktail-db.p.rapidapi.com"
 	}
 };
-
+//getting the ajax response
 $.ajax(settings).done(function (response) {
 	console.log(response);
 });
