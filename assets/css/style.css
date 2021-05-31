@@ -102,7 +102,11 @@ body {
     border: none;
 }
 
+<<<<<<< HEAD
 #btn-casual {
+=======
+#btn-1 {
+>>>>>>> 06f8786e5caee0d8e454041949d3f572f8a22cc4
     background-image: url("./../images/button-background-1.png");
     background-position: center; 
     background-repeat: no-repeat; 
@@ -113,7 +117,11 @@ body {
     font-family: 'Londrina Solid', cursive;
 }
 
+<<<<<<< HEAD
 #btn-romantic {
+=======
+#btn-2 {
+>>>>>>> 06f8786e5caee0d8e454041949d3f572f8a22cc4
     background-image: url("./../images/button-background-2.png");
     background-position: center; 
     background-repeat: no-repeat; 
@@ -129,6 +137,7 @@ footer {
     background-color: var(--pink);
     color: white;
     padding: 8px 0;
+<<<<<<< HEAD
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -162,3 +171,7 @@ footer {
     -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
     box-shadow:         1px 1px 5px rgba(0,0,0,0.5);
   }
+=======
+}
+
+>>>>>>> 06f8786e5caee0d8e454041949d3f572f8a22cc4
