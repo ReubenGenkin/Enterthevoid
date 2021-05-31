@@ -72,6 +72,6 @@ $.ajax(settings).done(function (response) {
 // recipe fetch
 
 function getRecipe() {
-let a =""
+let a ="sdfsdfsdfsdfsdfsdfds"
 
 }
