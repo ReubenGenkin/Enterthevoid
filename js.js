@@ -80,29 +80,42 @@ let a ="sdfsdfsdfsdfsdfsdfds"
 
 //button functionality for first page (casual)(romantic)
 
-$('#btn-1').click(function(){
+$('.btn').click(function(){
+
+   Object.defineProperty(String.prototype, 'capitalize', {
+      value: function () {
+          return this.charAt(0).toUpperCase() + this.slice(1);
+      },
+      writable: true,
+      configurable: true
+  });
+
+   //storing the id
+   let buttonId = $(this).attr("id")
+   console.log(buttonId)
+
+   let buttonSplit = buttonId.split("-")[1]
 
    //removing page content
    $('#slogan').remove()
-   $('#btn-1').remove()
-   $('#btn-2').remove()
+   $('#btn-casual').remove()
+   $('#btn-romantic').remove()
 
    //populating page with new content
-   $('#subheader').text('Casual')
+   $('#subheader').text(buttonSplit.capitalize())
    $('#page-direction').text('Please click the following buttons for more information.')
 
+   //creating the buttons
    for (i=0; i<3; i++) {
       
       let buttonChoices = $('<button>', {id: "button-"+ i, "class": "gradient-text button-0-1-2"})
       $('#buttonDiv').append(buttonChoices)
    }
-   
+   //setting content for the buttons
    $('.button-0-1-2').each(function (){
       let buttonTitle = ["Drink", "Recipe", "Restaurant"];
       var textItem = $(this).attr("id").split("-")[1]
 
       $(this).text(buttonTitle[textItem])
-
-
    })
 })

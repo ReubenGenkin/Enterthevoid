@@ -102,7 +102,7 @@ body {
     border: none;
 }
 
-#btn-1 {
+#btn-casual {
     background-image: url("./../images/button-background-1.png");
     background-position: center; 
     background-repeat: no-repeat; 
@@ -113,7 +113,7 @@ body {
     font-family: 'Londrina Solid', cursive;
 }
 
-#btn-2 {
+#btn-romantic {
     background-image: url("./../images/button-background-2.png");
     background-position: center; 
     background-repeat: no-repeat; 
