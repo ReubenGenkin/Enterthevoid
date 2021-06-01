@@ -135,8 +135,8 @@ $('.btn').click(function generateDate(){
    //creating the buttons
    for (i=0; i<3; i++) {
       
-      let buttonLink = $('<a>', {id: "link-"+ i, "class": "modal-0-1-2", "href": "#ex"+i, "rel": "modal:open"})
-      let buttonChoices = $('<button>', {id: "button-"+ i, "class": "gradient-text button-0-1-2"})
+      let buttonLink = $('<a>', {id: "link-"+ i, class: "modal-0-1-2", href: "#ex"+i, rel: "modal:open"})
+      let buttonChoices = $('<button>', {id: "button-"+ i, class: "gradient-text button-0-1-2"})
 
       $('#buttonDiv').append(buttonLink)
       buttonLink.append(buttonChoices)
@@ -151,11 +151,9 @@ $('.btn').click(function generateDate(){
 
    //generating refresh content(button, title, and span)
    let refreshDiv = $('<div>', {id: "refresh"})
-   let refreshTitle = $('<h3>', {id: "refresh-title"}).text("Refresh")
-   let refreshSpan = $('<span>', {id: "refresh-span"}).text("If you want new option, please click the refresh button")
-   let refreshBtn = $('<button>', {id: "refresh-btn", "class": "refresh-btn"}).text("Refresh")
+   let refreshSpan = $('<span>', {id: "refresh-span"}).text("If you want new options, please click the refresh button")
+   let refreshBtn = $('<button>', {id: "refresh-btn", class: "refresh-btn"}).text("Refresh")
    $('body').append(refreshDiv)
-   refreshDiv.append(refreshTitle)
    refreshDiv.append(refreshSpan)
    refreshDiv.append(refreshBtn)
 
