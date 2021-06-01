@@ -9,11 +9,16 @@
     --gradient: linear-gradient(142deg, rgba(255,33,215,1) 0%, rgb(0, 132, 255) 100%);
   }
 
-body {
+/* background image */
+html {
     background-image: url("./../images/dateNightBackground.png");
-    background-position: center; 
+    background-position: center center; 
     background-repeat: no-repeat; 
+    background-attachment: fixed;
     background-size: cover; 
+}
+
+body {
     text-align: center;
     color: black;
     font-family: 'Montserrat', sans-serif;
@@ -32,7 +37,7 @@ body {
 /* header area */
 .hero {
     background-image: url("./../images/title-background.png");
-    background-position: center; 
+    background-position: center center; 
     background-repeat: no-repeat; 
     background-size: 60% 90%;
 }
@@ -60,17 +65,19 @@ body {
 /* app description area */
 .slogan-style {
     background-image: url("./../images/blurb-background.png");
-    background-position: center; 
+    background-position: center center; 
     background-repeat: no-repeat; 
-    height: 100px;
+    background-size: 60% 90%;
+    margin: 0 auto;
 }
 
 .slogan {
-    font-weight: 600;
-    width:55%;
     color: black;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 2% 2%;
+    width: 60%;
     margin: 0 auto;
-    padding-top: 30px;
 }
 
 /* buttons */
@@ -83,7 +90,7 @@ body {
     font-weight: 900;
 }
 
-#button-group p {
+#button-group span {
     font-size: 2rem;
     font-weight: 700;
     margin: -8px 0;
@@ -102,12 +109,7 @@ body {
     border: none;
 }
 
-<<<<<<< HEAD
-#btn-casual {
-=======
-#btn-1 {
->>>>>>> 06f8786e5caee0d8e454041949d3f572f8a22cc4
-    background-image: url("./../images/button-background-1.png");
+.btn-style {
     background-position: center; 
     background-repeat: no-repeat; 
     background-color: transparent;
@@ -117,61 +119,113 @@ body {
     font-family: 'Londrina Solid', cursive;
 }
 
-<<<<<<< HEAD
-#btn-romantic {
-=======
-#btn-2 {
->>>>>>> 06f8786e5caee0d8e454041949d3f572f8a22cc4
-    background-image: url("./../images/button-background-2.png");
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-color: transparent;
-    background-size: cover;
-    display: inline-block;
-    border: none;
-    font-family: 'Londrina Solid', cursive;
+#btn-casual,
+#button-0,
+#button-3 {
+    background-image: url("./../images/button-background-1.png");
 }
+
+#btn-romantic,
+#button-1,
+#refresh-btn {
+    background-image: url("./../images/button-background-2.png");
+}
+
+/* refresh */
+#refresh {
+    background-image: url("./../images/blurb-background.png");
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    background-size: 60% 90%;
+}
+
+#refresh-span {
+    font-weight: 800;
+}
+
+/* modal */
+#ex0,
+#ex1,
+#ex2 {
+    background-image: url("./../images/modal.png");
+    background-position: center center; 
+    background-repeat: no-repeat; 
+}
+
+.modal {
+    overflow: visible;
+    background-color: transparent;
+}
+
 
 /* footer area */
 footer {
     background-color: var(--pink);
     color: white;
     padding: 8px 0;
-<<<<<<< HEAD
     position: fixed;
     bottom: 0;
     width: 100%;
 }
 
-/* modal styles */
+/* reposonsive queries */
 
-.modal {
-    width: 200px;
-    height: 500px;
+@media screen and (max-width: 1201px) {
+    .app-name {
+        font-size: 3.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.75rem;
+    }
+
+    .slogan {
+        width: 60%;
+        margin: 0 auto;
+    }
     
 }
 
-.modal a.close-modal[class*="icon-"] {
-    top: -10px;
-    right: -10px;
-    width: 20px;
-    height: 20px;
-    color: #fff;
-    line-height: 1.25;
-    text-align: center;
-    text-decoration: none;
-    text-indent: 0;
-    background: #900;
-    border: 2px solid #fff;
-    -webkit-border-radius:  26px;
-    -moz-border-radius:     26px;
-    -o-border-radius:       26px;
-    -ms-border-radius:      26px;
-    -moz-box-shadow:    1px 1px 5px rgba(0,0,0,0.5);
-    -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-    box-shadow:         1px 1px 5px rgba(0,0,0,0.5);
+@media screen and (max-width: 769px) {
+    .hero {
+        background-size: 80% 90%;
+    }
+
+  .slogan-style {
+      background-size: 80% 100%;
   }
-=======
+
+  .slogan {
+    padding: 4% 0%;
+  }
+
+  .btn {
+      width: 80%;
+  }
+    
 }
 
->>>>>>> 06f8786e5caee0d8e454041949d3f572f8a22cc4
+@media screen and (max-width: 481px) {
+
+    body {
+        margin-bottom:50px;
+    }
+    
+    .app-name {
+        line-height: 1;
+        padding: 5% 2%;
+    }
+
+    .slogan-style {
+        background-size: 300px 400px;
+    }
+
+    #button-group {
+        margin: 20px 0 8px 0;
+    }
+
+    .column {
+        padding: .2rem;
+    }
+    
+}
