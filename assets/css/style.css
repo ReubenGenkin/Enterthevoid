@@ -109,8 +109,7 @@ body {
     border: none;
 }
 
-#btn-casual {
-    background-image: url("./../images/button-background-1.png");
+.btn-style {
     background-position: center; 
     background-repeat: no-repeat; 
     background-color: transparent;
@@ -120,16 +119,44 @@ body {
     font-family: 'Londrina Solid', cursive;
 }
 
-#btn-romantic {
-    background-image: url("./../images/button-background-2.png");
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-color: transparent;
-    background-size: cover;
-    display: inline-block;
-    border: none;
-    font-family: 'Londrina Solid', cursive;
+#btn-casual,
+#button-0,
+#button-3 {
+    background-image: url("./../images/button-background-1.png");
 }
+
+#btn-romantic,
+#button-1,
+#refresh-btn {
+    background-image: url("./../images/button-background-2.png");
+}
+
+/* refresh */
+#refresh {
+    background-image: url("./../images/blurb-background.png");
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    background-size: 60% 90%;
+}
+
+#refresh-span {
+    font-weight: 800;
+}
+
+/* modal */
+#ex0,
+#ex1,
+#ex2 {
+    background-image: url("./../images/modal.png");
+    background-position: center center; 
+    background-repeat: no-repeat; 
+}
+
+.modal {
+    overflow: visible;
+    background-color: transparent;
+}
+
 
 /* footer area */
 footer {
