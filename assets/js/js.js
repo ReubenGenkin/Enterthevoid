@@ -158,6 +158,7 @@ $('.btn').click(function generateDate() {
          $("#button-" + i).remove();
          $("#result-" + i).remove();
       }
+      
    }
 
    //end of refresh testing
@@ -191,7 +192,7 @@ $('.btn').click(function generateDate() {
    let refreshDiv = $('<div>', { id: "refresh", class: "columns is-justify-content-center" })
    let refreshWrapper = $('<div>', { id: "refresh-wrapper", class: "column is-one-fifth " })
    let refreshPara = $('<p>', { id: "refresh-para" }).text("Don't like what you see? Click the refresh button!")
-   let refreshBtn = $('<button>', { id: "refresh-btn", class: "refresh-btn btn btn-styling" })
+   let refreshBtn = $('<button>', { id: "refresh-btn", class: "refresh-btn btn btn-style" })
    let refreshSpan = $('<span>', { id: "refresh-span", class: "gradient-text" }).text("Refresh")
 
    $('body').append(refreshDiv)
@@ -202,9 +203,10 @@ $('.btn').click(function generateDate() {
 
    //refresh button on click function
    $('#refresh-btn').click(function () {
+      $('.ingredient-item').remove();
       localStorage.setItem("refreshed", "true")
       generateDate();
-
+ 
       $('#rest-input').removeClass("hide")
       $('#rest-search').removeClass("hide")
       $('#rest-inst').removeClass("hide")
