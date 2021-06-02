@@ -36,31 +36,17 @@
             suggestions on what to make for dinner and even a few cocktail recipes along the way!</p>
     </section>
 
-    <div class="columns is-flex-wrap-wrap">
+    <div id="column-container" class="columns is-flex-wrap-wrap">
 
         <div id="button-group" class="column is-full">
             <h2 id="subheader">First Things First</h2>
             <span id="page-direction">Choose a theme</span>
         </div>
-        <div id="buttonDiv" class="column is-3 is-offset-one-quarter-tablet"><button id="btn-casual" class="btn btn-style"><span
-                    class="gradient-text"><i class="fas fa-smile"></i> Casual</span></button></div>
-        <div id="forAppend" class="column is-3"><button id="btn-romantic" class="btn btn-style"><span class="gradient-text"><i
-                        class="fas fa-heart"></i> Romantic</span></button></div>
-
-        <!-- ***CODE SNIPPET FOR HOW NEW BUTTONS SHOULD BE GENERATED****
-        <div class="column is-one-third"><button id="button-0" class="btn btn-style"><span class="gradient-text">Drink</span></button></div>
-        <div class="column is-one-third"><button id="button-1" class="btn btn-style"><span class="gradient-text">Recipe</span></button></div>
-        <div class="column is-one-third"><button id="button-0" class="btn btn-style"><span class="gradient-text">Restaurant</span></button></div>
-        -->
-
-        <!-- ***REFRESH SET UP SUGGESTIONS*****
-        <div id="refresh" class="columns">
-        ---NO TITLE---
-        <span id="refresh-span" class="column">Wanna see something new? Hit that refresh button below!</span>
-        <div class="column"><button id="refresh-btn" class="btn btn-styling"><span class="gradient-text">Refresh</span></button></div>
-        </div>    
-        -->
-        
+        <div id="buttonDiv" class="column is-3 is-offset-one-quarter-tablet"><button id="btn-casual"
+                class="btn btn-style"><span class="gradient-text"><i class="fas fa-smile"></i> Casual</span></button>
+        </div>
+        <div id="forAppend" class="column is-3"><button id="btn-romantic" class="btn btn-style"><span
+                    class="gradient-text"><i class="fas fa-heart"></i> Romantic</span></button></div>
 
     </div>
 
@@ -73,6 +59,13 @@
     <!-- Drink modal -->
     <div id="ex0" class="modal drink-modal">
         <h2>Here's a drink!</h2>
+        <h3 id="drink-name"></h3>
+        <div id="drink-wrapper">
+            <h3>Ingredients</h3>
+            <ul id="drink-ingredients"></ul>
+            <span id="drink-glass"></span>
+            <p id="drink-instructions"></p>
+        </div>
         <span>Enjoy your date!</span>
         <a href="#" rel="modal:close">Close</a>
     </div>
@@ -86,7 +79,14 @@
 
     <!-- Restaurant modal -->
     <div id="ex2" class="modal restaurant-modal">
-        <h2>Here's a restaurant!</h2>
+        <h2>Restaurant</h2>
+        <p id="rest-inst">Enter your zipcode to search</p>
+        <input type="text" id="rest-input">
+        <label id="rest-label">Search for a restaurant</label>
+        <button id="rest-search">Search</button>
+        <h3 id="rest-name"></h3>
+        <span id="rest-number"></span>
+        <div id="rest-div"><iframe id="rest-frame" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
         <span>Enjoy your date!</span>
         <a href="#" rel="modal:close">Close</a>
     </div>
