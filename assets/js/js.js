@@ -80,7 +80,7 @@ let a ="sdfsdfsdfsdfsdfsdfds"
 
 //button functionality for first page (casual)(romantic)
 
-$('.btn').click(function generateDate(){
+$('.btn').click(function generateDate() {
 
    Object.defineProperty(String.prototype, 'capitalize', {
       value: function () {
@@ -104,9 +104,11 @@ $('.btn').click(function generateDate(){
    localStorage.setItem("buttonClicked", buttonSplit.capitalize())
 
    //removing page content on initial
-   $('#slogan').remove()
-   $('#btn-casual').remove()
-   $('#btn-romantic').remove()
+   $('#slogan').remove();
+   $('#btn-casual').remove();
+   $('#btn-romantic').remove();
+   $('#buttonDiv').remove();
+   $('#forAppend').remove();
 
    //populating page with new content on initial
    $('#subheader').text(buttonSplit.capitalize())
@@ -134,30 +136,40 @@ $('.btn').click(function generateDate(){
 
    //creating the buttons
    for (i=0; i<3; i++) {
-      
-      let buttonLink = $('<a>', {id: "link-"+ i, "class": "modal-0-1-2", "href": "#ex"+i, "rel": "modal:open"})
-      let buttonChoices = $('<button>', {id: "button-"+ i, "class": "gradient-text button-0-1-2"})
-
-      $('#buttonDiv').append(buttonLink)
+      let resultDiv = $('<div>', {id: "result-"+i, class: "column is-one-fifth"})
+      let buttonLink = $('<a>', {id: "link-"+ i, class: "modal-0-1-2", href: "#ex"+i, rel: "modal:open"})
+      let buttonChoices = $('<button>', {id: "button-"+ i, class: "button-0-1-2 btn btn-style"})
+      let buttonSpan = $('<span>', {id: "span-"+i, class: "gradient-text"})
+      $('#column-container').append(resultDiv)
       buttonLink.append(buttonChoices)
+      buttonChoices.append(buttonSpan)
+      resultDiv.append(buttonLink)
+
+      if ($('#result-0')) {
+         $('#result-0').addClass("is-offset-one-fifth")
+      }
    }
+
    //setting content for the buttons
    $('.button-0-1-2').each(function (){
       let buttonTitle = ["Drink", "Recipe", "Restaurant"];
-      var textItem = $(this).attr("id").split("-")[1]
+      let textItem = $(this).attr("id").split("-")[1]
 
-      $(this).text(buttonTitle[textItem])
+      $(this).find('span').text(buttonTitle[textItem])
    })
 
    //generating refresh content(button, title, and span)
-   let refreshDiv = $('<div>', {id: "refresh"})
-   let refreshTitle = $('<h3>', {id: "refresh-title"}).text("Refresh")
-   let refreshSpan = $('<span>', {id: "refresh-span"}).text("If you want new option, please click the refresh button")
-   let refreshBtn = $('<button>', {id: "refresh-btn", "class": "refresh-btn"}).text("Refresh")
+   let refreshDiv = $('<div>', {id: "refresh", class: "columns is-justify-content-center"})
+   let refreshWrapper = $('<div>', {id: "refresh-wrapper", class: "column is-one-fifth "})
+   let refreshPara = $('<p>', {id: "refresh-para"}).text("Don't like what you see? Click the refresh button!")
+   let refreshBtn = $('<button>', {id: "refresh-btn", class: "refresh-btn btn btn-styling"})
+   let refreshSpan = $('<span>', {id: "refresh-span", class: "gradient-text"}).text("Refresh")
+
    $('body').append(refreshDiv)
-   refreshDiv.append(refreshTitle)
-   refreshDiv.append(refreshSpan)
-   refreshDiv.append(refreshBtn)
+   refreshDiv.append(refreshWrapper)
+   refreshWrapper.append(refreshPara)
+   refreshWrapper.append(refreshBtn)
+   refreshBtn.append(refreshSpan)
 
    //refresh button on click function
    $('#refresh-btn').click(function() {

@@ -109,12 +109,7 @@ body {
     border: none;
 }
 
-<<<<<<< HEAD
-#btn-casual {
-    background-image: url("./../images/button-background-1.png");
-=======
 .btn-style {
->>>>>>> b9995a9adf0fd73b91bf84ad40790ec105ba50f3
     background-position: center; 
     background-repeat: no-repeat; 
     background-color: transparent;
@@ -124,19 +119,15 @@ body {
     font-family: 'Londrina Solid', cursive;
 }
 
-<<<<<<< HEAD
-#btn-romantic {
-=======
 #btn-casual,
 #button-0,
-#button-3 {
+#button-2 {
     background-image: url("./../images/button-background-1.png");
 }
 
 #btn-romantic,
 #button-1,
 #refresh-btn {
->>>>>>> b9995a9adf0fd73b91bf84ad40790ec105ba50f3
     background-image: url("./../images/button-background-2.png");
 }
 
@@ -177,36 +168,6 @@ footer {
     width: 100%;
 }
 
-<<<<<<< HEAD
-/* modal styles */
-
-.modal {
-    width: 200px;
-    height: 500px;
-    
-}
-
-.modal a.close-modal[class*="icon-"] {
-    top: -10px;
-    right: -10px;
-    width: 20px;
-    height: 20px;
-    color: #fff;
-    line-height: 1.25;
-    text-align: center;
-    text-decoration: none;
-    text-indent: 0;
-    background: #900;
-    border: 2px solid #fff;
-    -webkit-border-radius:  26px;
-    -moz-border-radius:     26px;
-    -o-border-radius:       26px;
-    -ms-border-radius:      26px;
-    -moz-box-shadow:    1px 1px 5px rgba(0,0,0,0.5);
-    -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-    box-shadow:         1px 1px 5px rgba(0,0,0,0.5);
-  }
-=======
 /* reposonsive queries */
 
 @media screen and (max-width: 1201px) {
@@ -268,4 +229,3 @@ footer {
     }
     
 }
->>>>>>> b9995a9adf0fd73b91bf84ad40790ec105ba50f3
