@@ -132,15 +132,14 @@ body {
 }
 
 /* refresh */
-#refresh {
-    background-image: url("./../images/blurb-background.png");
-    background-position: center center; 
-    background-repeat: no-repeat; 
-    background-size: 60% 90%;
-}
+
 
 #refresh-span {
     font-weight: 800;
+}
+
+#refresh-para {
+    font-weight: 600;
 }
 
 /* modal */
