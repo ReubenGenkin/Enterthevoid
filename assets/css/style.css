@@ -54,6 +54,12 @@ body {
     font-size: 4.5rem;
 }
 
+.app-name a {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
 .subtitle {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -131,6 +137,10 @@ body {
     background-image: url("./../images/button-background-2.png");
 }
 
+#refresh-wrapper {
+    margin: 0 auto;
+}
+
 /* refresh */
 
 
@@ -146,14 +156,69 @@ body {
 #ex0,
 #ex1,
 #ex2 {
-    background-image: url("./../images/modal.png");
-    background-position: center center; 
+    background-image: url("./../images/modal-bckgrnd.svg"); 
     background-repeat: no-repeat; 
+    background-size: cover;
+    background-color: transparent;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 .modal {
     overflow: visible;
-    background-color: transparent;
+}
+
+.modal-title {
+    font-family: 'Londrina Solid', cursive;
+    font-weight: 700;
+    font-size: 170%;
+}
+
+.modal-date {
+    font-family: 'Londrina Solid', cursive;
+    font-weight: 600;
+    font-size: 150%;
+}
+
+#rest-inst {
+    text-align: center;
+}
+
+#rest-input {
+    margin: 8px 0 8px;
+}
+
+#drink-name,
+#rest-inst,
+#rest-name {
+    font-weight: 600;
+    font-size: 120%;
+    padding-bottom: 3px;
+}
+
+#ingredients,
+#drink-glass,
+#rest-number {
+    font-style: italic;
+    font-weight: 600;
+}
+
+#drink-ingredients {
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+.disclaimer {
+    padding-top: 4px;
+    font-size: 80%;
+    font-weight: 500;
+    text-align: center;
+}
+
+.hide {
+    display: none;
 }
 
 
@@ -167,9 +232,6 @@ footer {
     width: 100%;
 }
 
-.hide {
-    display: none;
-}
 
 /* reposonsive queries */
 
