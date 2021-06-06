@@ -25,7 +25,7 @@
 <body>
     <header class="hero">
         <div id="title" class="hero-body">
-            <h1 class="app-name"><i class="fas fa-grin-hearts"></i> Date Night Done Right</h1>
+            <h1 class="app-name"><a href="./index.html"><i class="fas fa-grin-hearts"></i> Date Night Done Right</a></h1>
             <span class="subtitle gradient-text">Let's Get This Party Started</span>
         </div>
     </header>
@@ -58,37 +58,40 @@
 
     <!-- Drink modal -->
     <div id="ex0" class="modal drink-modal">
-        <h2>Here's a drink!</h2>
+        <h2 class="modal-title"><span class="gradient-text">Here's a drink!</span></h2>
         <h3 id="drink-name"></h3>
         <div id="drink-wrapper">
-            <h3>Ingredients</h3>
+            <h3 id="ingredients">Ingredients</h3>
             <ul id="drink-ingredients"></ul>
             <span id="drink-glass"></span>
             <p id="drink-instructions"></p>
         </div>
-        <span>Enjoy your date!</span>
-        <a href="#" rel="modal:close">Close</a>
+        <span class="gradient-text modal-date">Enjoy your date!</span>
+        <p class="disclaimer">Don't like what you see or want another option? Close the popup and hit the refresh button!</p>
+        <!-- <a href="#" rel="modal:close">Close</a> -->
     </div>
 
     <!-- Recipe modal -->
     <div id="ex1" class="modal recipe-modal">
-        <h2>Here's a recipe!</h2>
-        <span>Enjoy your date!</span>
-        <a href="#" rel="modal:close">Close</a>
+        <h2 class="modal-title"><span class="gradient-text">Here's a recipe!</span></h2>
+        <span class="gradient-text modal-date">Enjoy your date!</span>
+        <!-- <a href="#" rel="modal:close">Close</a> removed due to redundancy-->
+        <p class="disclaimer">Don't like what you see or want another option? Close the popup and hit the refresh button!</p>
     </div>
 
     <!-- Restaurant modal -->
     <div id="ex2" class="modal restaurant-modal">
-        <h2>Restaurant</h2>
-        <p id="rest-inst">Enter your zipcode to search</p>
-        <input type="text" id="rest-input">
-        <label id="rest-label">Search for a restaurant</label>
-        <button id="rest-search">Search</button>
+        <h2 class="modal-title"><span class="gradient-text">Restaurant</span></h2>
+        <p id="rest-inst">Enter your zipcode to search for a restaurant</p>
+        <input class="input" type="text" id="rest-input">
+        <!-- <label id="rest-label">Search for a restaurant</label> -->
+        <button class="button is-small is-info is-fullwidth" id="rest-search">Search</button>
         <h3 id="rest-name"></h3>
         <span id="rest-number"></span>
-        <div id="rest-div"><iframe id="rest-frame" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
-        <span>Enjoy your date!</span>
-        <a href="#" rel="modal:close">Close</a>
+        <div class="hide" id="rest-div"><iframe id="rest-frame" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+        <span class="gradient-text modal-date">Enjoy your date!</span>
+        <p class="disclaimer">Don't like what you see or want another option? Close the popup and hit the refresh button!</p>
+        <!-- <a href="#" rel="modal:close">Close</a> -->
     </div>
 
 
