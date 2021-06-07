@@ -23,7 +23,7 @@
 @ReubenGenkin
 @ashryan125
 
-![animated gif of app](image.jpg)
+![animated gif of app](./assets/images/date-night-screenshot.png)
 
 
 
