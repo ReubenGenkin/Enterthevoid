@@ -189,15 +189,23 @@ $('.btn').click(function generateDate() {
    })
 
    //generating refresh content(button, title, and span)
+<<<<<<< HEAD
    let refreshDiv = $('<div>', { id: "refresh", class: "columns is-justify-content-center" })
    let refreshWrapper = $('<div>', { id: "refresh-wrapper", class: "column is-one-fifth " })
    let refreshPara = $('<p>', { id: "refresh-para" }).text("Don't like what you see? Click the refresh button!")
+=======
+   let refreshDiv = $('<div>', { id: "refresh", class: "columns is-flex-direction-column" })
+   let refreshWrapper = $('<div>', { id: "refresh-wrapper", class: "column is-one-fifth" })
+   let refreshParaDiv = $('<div>', { id: "refresh-para-div"})
+   let refreshPara = $('<p>', { id: "refresh-para" }).text("Don't like what you see or want another option? Click the refresh button!")
+>>>>>>> 29051dcbfa1673e8856ce0d3b73e225ca869a8f2
    let refreshBtn = $('<button>', { id: "refresh-btn", class: "refresh-btn btn btn-style" })
    let refreshSpan = $('<span>', { id: "refresh-span", class: "gradient-text" }).text("Refresh")
 
    $('body').append(refreshDiv)
+   refreshDiv.append(refreshParaDiv)
+   refreshParaDiv.append(refreshPara)
    refreshDiv.append(refreshWrapper)
-   refreshWrapper.append(refreshPara)
    refreshWrapper.append(refreshBtn)
    refreshBtn.append(refreshSpan)
 
@@ -219,9 +227,9 @@ $('#rest-search').click(function(){
    zipCode = $('#rest-input').val().trim();
    console.log(zipCode);
    getRestaurant();
-
+   $('#rest-div').removeClass("hide")
    $('#rest-input').addClass("hide")
-   $('#rest-search').addClass("hide")
+   $('#rest-search').addClass("hide").removeClass("is-fullwidth")
    $('#rest-inst').addClass("hide")
    $('#rest-label').addClass("hide")
 })

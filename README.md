@@ -1,6 +1,6 @@
 # Date Night Done Right
 
->[Date Night Done Right](url) is an app we created that answers the age old question of "what do we eat tonight"
+>[Date Night Done Right](https://reubengenkin.github.io/Enterthevoid/) is an app we created that answers the age old question of "what do we eat tonight"
 
 ### This app will give you suggestions on receipes and cocktails based on option chosen:
 - Doing something romantic themed or
@@ -23,7 +23,7 @@
 @ReubenGenkin
 @ashryan125
 
-![animated gif of app](image.jpg)
+![animated gif of app](./assets/images/date-night-screenshot.png)
 
 
 
